@@ -1,5 +1,4 @@
-from httpd
-run apt update -y
-run apt install apache2 -y
-copy . /var/www/html/
-cmd ["/usr/sbin/apachectl" , "-D" , "FOREGROUND" ]
+FROM openjdk:8-jdk-alpine
+WORKDIR /app
+COPY ./target/*.jar /app.jar
+CMD ["java", "-jar", "app.jar"]
