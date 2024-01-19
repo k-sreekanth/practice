@@ -3,7 +3,7 @@ pipeline (){
     stages(){
         stage('this is my first stage'){
             steps(){
-                sh'touch lavu'
+                sh'touch lavuu'
             }
         }
     }
