@@ -16,7 +16,7 @@ pipeline (){
                sh'mvn clean package'
             }
         }
-         stages ("deploye") {
+         stage("deploye") {
             steps(){
                sh'echo sreekanth'
             }
