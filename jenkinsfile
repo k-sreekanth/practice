@@ -1,9 +1,9 @@
 pipeline (){
     agent any 
     stages(){
-        stage('this is my first stage'){
+        stage('checkout stage'){
             steps(){
-                sh'touch lavuu'
+               git 'https://github.com/k-sreekanth/one.git'
             }
         }
     }
