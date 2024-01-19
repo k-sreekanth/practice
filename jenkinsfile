@@ -1,0 +1,10 @@
+pipeline (){
+    agent any 
+    stages(){
+        stage('this is my first stage'){
+            steps(){
+                sh'touch sreekanth'
+            }
+        }
+    }
+}
