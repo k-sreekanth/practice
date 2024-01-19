@@ -18,7 +18,8 @@ pipeline (){
         }
          stage("deploye") {
             steps(){
-               sh'echo sreekanth'
+               sh'docker build -t image1:1 .'
+               sh'docker run -itd --name count1 image1
             }
          }
     }
