@@ -3,24 +3,8 @@ pipeline (){
     stages(){
         stage('checkout stage'){
             steps(){
-               git 'https://github.com/k-sreekanth/one.git'
+               sh 'mkdir sreekanth'
             }
         }
-        stage('test'){
-            steps(){
-               sh'mvn test'
-            }
-        }
-         stage('build'){
-            steps(){
-               sh'mvn clean package'
-            }
-        }
-         stage("deploye") {
-            steps(){
-               sh'docker build -t image1:1 .'
-               sh'docker run -it --name count1 image1'
-            }
-         }
     }
 }
